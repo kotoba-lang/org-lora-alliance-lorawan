@@ -7,7 +7,12 @@
 ;; (`main`); verified 2026-08-30 with
 ;; `gh api repos/kotoba-lang/org-nist-aes/commits/main --jq .sha`.
 {:paths ["src"]
- :deps {org.kotoba-lang/org-nist-aes
+ :deps {
+        ;; kotoba.lang.text, not clojure.string. Pinned as an explicit floor:
+        ;; tools.deps takes the NEWEST sha it is shown, so without a floor here
+        ;; this repo silently rides whatever a sibling happens to name.
+        io.github.kotoba-lang/text {:git/sha "73bdb13ae7a3d004b44bca08be03a3191157a38f"}
+       org.kotoba-lang/org-nist-aes
         {:git/url "https://github.com/kotoba-lang/org-nist-aes"
          :git/sha "7834b2f04729ab77259da26a8d728fe3595f041e"
          :deps/root "."}}

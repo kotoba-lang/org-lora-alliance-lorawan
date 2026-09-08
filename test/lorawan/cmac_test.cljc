@@ -3,7 +3,7 @@
   not recalled from memory, and not the LoRaWAN spec (LoRaWAN just names
   this algorithm; RFC 4493 defines it and is where a real answer lives)."
   (:require [aes.core]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [lorawan.cmac :as cmac]))
 
