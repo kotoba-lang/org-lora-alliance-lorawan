@@ -96,9 +96,9 @@ Network Server's job this stateless codec does not do.
 ## Verify
 
 ```sh
-clojure -M:test                                                        # JVM
-clojure -M:oracle                                                      # + independent JVM AES cross-check
-nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljk   # ClojureScript
+kbb -M:test                                                        # JVM
+kbb -M:oracle                                                      # + independent JVM AES cross-check
+kbb --backend sci --classpath "$(kbb -A:cljs -Spath)" scripts/verify-cljs.cljk   # ClojureScript
 ```
 
 **LoRaWAN's own spec text gives no worked byte-level examples** for a MIC,
