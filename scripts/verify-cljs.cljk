@@ -8,7 +8,7 @@
 ;; the `:cljs` branches, and `org-nist-aes`'s AES-128 (a git dependency)
 ;; has to resolve and run under nbb too.
 ;;
-;;   nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljs
+;;   nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljk
 (ns verify-cljs
   (:require [clojure.test :as t]
             [lorawan.cmac-test]

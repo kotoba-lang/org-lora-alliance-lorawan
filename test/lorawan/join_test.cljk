@@ -1,7 +1,7 @@
 (ns lorawan.join-test
   "LoRaWAN L2 1.0.4 §6.2.5/§6.2.6/§6.2.6-session-keys. Join-Accept's
   encrypt-vs-decrypt-direction correctness is verified independently in
-  `oracle/lorawan/join_oracle_test.clj` against the JVM's own AES — this
+  `oracle/lorawan/join_oracle_test.cljk` against the JVM's own AES — this
   suite covers Join-Request's full round trip (which this library both
   encodes and decodes) plus decode-side negative tests, and session-key
   derivation's own real property (NwkSKey ≠ AppSKey for the same nonce,
