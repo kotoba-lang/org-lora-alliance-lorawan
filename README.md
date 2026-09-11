@@ -98,7 +98,7 @@ Network Server's job this stateless codec does not do.
 ```sh
 clojure -M:test                                                        # JVM
 clojure -M:oracle                                                      # + independent JVM AES cross-check
-nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljs   # ClojureScript
+nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljk   # ClojureScript
 ```
 
 **LoRaWAN's own spec text gives no worked byte-level examples** for a MIC,
@@ -107,7 +107,7 @@ algorithms. Correctness rests on:
 
 1. **RFC 4493's own published CMAC test vectors** for the one piece that
    *does* have a canonical answer.
-2. **An independent JVM AES oracle** (`oracle/lorawan/join_oracle_test.clj`,
+2. **An independent JVM AES oracle** (`oracle/lorawan/join_oracle_test.cljk`,
    `javax.crypto`, same pattern as `org-nist-aes`'s own `:oracle` alias):
    builds a Join-Accept the way a join server would — CMAC with this
    library, then cipher with the JVM's `Cipher` in `DECRYPT_MODE` — and
